@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Task1_2_.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Login Form</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right,#2f80ed,#56ccf2); 
+            color: white;
+            text-align: center;
+        }
+
+        /* Independent CSS for "Login Form using HTML and CSS" */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        h5 {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        input[type="text"], input[type="password"], asp\:TextBox {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .remember-me, .forgot-password {
+            display: flex;
+            /*justify-content: space-between;*/
+            /*align-items: center;*/
+            font-size: 0.9rem;
+        }
+
+        button, asp\:Button {
+            width: 100%;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover, asp\:Button:hover {
+            background-color: #333;
+        }
+
+        .register-link {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        .register-link a {
+            color:#56ccf2;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <h1>Login Form using HTML and CSS</h1>
+    <form id="form1" runat="server">
+        
+        
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <h3>Sign in</h3>
+        <h5>Sign in with your username and password</h5>
+
+        <asp:Label ID="Label1" runat="server" Text="Your username"></asp:Label>
+        <asp:TextBox ID="TextBox1" runat="server" TextMode="SingleLine" placeholder="Enter Username"></asp:TextBox>
+
+        <asp:Label ID="Label2" runat="server" Text="Your password"></asp:Label>
+        <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" placeholder="Enter Password"></asp:TextBox>
+
+        <div class="remember-me">
+            <asp:CheckBox ID="CheckBox1" runat="server" Text="Remember me" />
+            <asp:Label ID="Label3" runat="server">
+                <a href="#" style="color: #56ccf2; text-decoration: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Forgot Password?</a>
+            </asp:Label>
+        </div>
+
+        <asp:Button ID="Button1" runat="server" Text="Login" Height="62px" style="margin-left: 0px" Width="393px" />
+
+        <div class="register-link">
+            <asp:Label ID="Label4" runat="server">
+                Not a member? <a href="#">Register now!</a>
+            </asp:Label>
+        </div>
+    </form>
+</body>
+</html>
